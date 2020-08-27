@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block content %}
+
+<h2 class="text-center">Rice Plant Disease Identifier</h2>
+
+<div>
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+
+        <div class="row">
+            <div  class="col-4">
+            </div>
+            <div  class="col-4 d-flex justify-content-center mt-3">
+                <label for="imageUpload" class="upload-label">
+                    Choose...
+                </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    
+
+            </div>
+            
+        </div>
+
+        </form>
+        
+    <div class="image-section" style="display:none;">
+
+            <div class="row">
+                <div  class="col-4">
+                </div>
+
+                <div  class="col-4 d-flex justify-content-center">
+                    <div class="img-preview">
+                        <div id="imagePreview">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div  class="col-4">
+                </div>
+                <div  class="col-4 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+                </div>
+            </div>
+
+           
+        
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result" class="text-center">
+        <span> </span>
+    </h3>
+
+</div>
+
+{% endblock %}
